@@ -34,6 +34,8 @@ def echo(update: Update, context: CallbackContext) -> None:
     
 if __name__ == "__main__":
 
+    logger.info(update.message.text)
+
     """Start the bot."""
     updater = Updater(SOME_SECRET, use_context=True)
 
@@ -45,7 +47,7 @@ if __name__ == "__main__":
 
     updater.shutdown()
 
-    logger.info(update.message.text)
+    
     
     #logger.info(f"Token value: {SOME_SECRET}")
     #r = requests.get('https://weather.talkpython.fm/api/weather/?city=Berlin&country=DE')
